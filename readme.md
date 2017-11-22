@@ -52,6 +52,8 @@ $ docker-compose up caddy
 ### 3. Start servers
 
 ```bash
+$ composer install
+$ cd laradoc 
 $ docker-compose up -d mysql caddy
 ```
 
