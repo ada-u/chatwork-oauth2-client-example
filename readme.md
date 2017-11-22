@@ -4,6 +4,16 @@
 
 [client registration- ChatWork](https://www.chatwork.com/service/packages/chatwork/subpackages/oauth/client_create.php)
 
+
+```bash
+$ cp .env.example .env
+```
+
+Edit `OAUTH2_CLIENT_ID`, `OAUTH2_CLIENT_SECRET`, `OAUTH2_REDIRECT_URI`.
+```bash
+$ vi .env
+```
+
 ### 2. Enable SSL & and generate a self-signed cert
 
 ```bash

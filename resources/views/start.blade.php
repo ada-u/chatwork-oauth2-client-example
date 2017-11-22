@@ -17,7 +17,7 @@
         <div class="col">
             <div class="lead">
                 <h1>adavalue</h1>
-                <a class="btn btn-primary btn-lg" href="https://www.chatwork.com/packages/oauth2/login.php?response_type=code&client_id=JOadgbnXgkr7X&scope=users.all:read rooms.all:read_write&state=dummy&redirect_uri=https://oauth2-chatwork.local/callback" role="button">make value</a>
+                <a class="btn btn-primary btn-lg" href="{{ $url }}" role="button">make value</a>
             </div>
         </div>
     </div>

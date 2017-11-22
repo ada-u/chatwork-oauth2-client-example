@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('start');
-});
+Route::get('/', 'WelcomeController@show');
 
 Route::get('/callback', 'CallbackController@show');
