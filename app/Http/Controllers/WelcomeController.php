@@ -25,7 +25,7 @@ class WelcomeController extends BaseController
         );
 
         $url = $provider->getAuthorizationUrl([
-            'scope' => 'users.all:read rooms.all:read_write'
+            'scope' => ['users.all:read', 'rooms.all:read_write']
         ]);
 
         return view('start', [

@@ -66,6 +66,17 @@ $ echo '127.0.0.1       oauth2-chatwork.local' >> /etc/hosts
 
 Access https://oauth2-chatwork.local via browser
 
+## Sample code
+
+### Generate a consent page link
+
+https://github.com/ada-u/chatwork-oauth2-client-example/blob/master/app/Http/Controllers/WelcomeController.php
+
+
+### Obtain an access token and refresh a token 
+
+https://github.com/ada-u/chatwork-oauth2-client-example/blob/master/app/Http/Controllers/CallbackController.php
+
 
 ## License
 

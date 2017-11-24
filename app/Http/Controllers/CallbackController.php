@@ -8,6 +8,7 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Log;
 use League\OAuth2\Client\Grant\AuthorizationCode;
+use League\OAuth2\Client\Grant\RefreshToken;
 
 class CallbackController extends BaseController
 {
@@ -46,11 +47,17 @@ class CallbackController extends BaseController
 
         Log::debug(json_encode(
             [
-                'access_token' => $accessToken,
+                'access_token' => $accessToken->getToken(),
             ]
         ));
 
         $resource_owner = $provider->getResourceOwner($accessToken);
+
+        //if ($accessToken->hasExpired()) {
+        $refreshedAccessToken = $provider->getAccessToken((string) new RefreshToken(), [
+            'refresh_token' => $accessToken->getRefreshToken()
+        ]);
+        //}
 
         Log::debug(json_encode(
             [
@@ -59,13 +66,14 @@ class CallbackController extends BaseController
         ));
 
         return view('callback', [
-            'resource_owner'    => $resource_owner,
-            'access_token'      => $accessToken,
-            'state'             => $state,
-            'code'              => $code,
-            'error'             => $error,
-            'error_code'        => $errorCode,
-            'error_description' => $errorDescription
+            'resource_owner'         => $resource_owner,
+            'access_token'           => $accessToken->getToken(),
+            'refreshed_access_token' => $refreshedAccessToken->getToken(),
+            'state'                  => $state,
+            'code'                   => $code,
+            'error'                  => $error,
+            'error_code'             => $errorCode,
+            'error_description'      => $errorDescription
         ]);
     }
 }

@@ -29,6 +29,7 @@
         <div class="lead">
             <h1>debug</h1>
             <pre>access_token: {{ $access_token }}</pre>
+            <pre>refreshed_access_token: {{ $refreshed_access_token }}</pre>
             <pre>code: {{ $code }}</pre>
             <pre>state: {{ $state }}</pre>
             <pre>error: {{ $error }}</pre>
