@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use ChatWork\OAuth2\Client\ChatWorkProvider;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller as BaseController;
@@ -64,6 +65,13 @@ class CallbackController extends BaseController
                 'resource_owner' => $resource_owner->toArray()
             ]
         ));
+
+        $client = new Client();
+        $response = $client->request('GET', 'https://api.chatwork.com/v2/my/status', [
+            'headers' => [
+                'Authorization' => sprintf('Bearer %s', $accessToken)
+            ]
+        ]);
 
         return view('callback', [
             'resource_owner'         => $resource_owner,

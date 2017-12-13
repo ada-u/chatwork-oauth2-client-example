@@ -14,7 +14,7 @@ Edit `OAUTH2_CLIENT_ID`, `OAUTH2_CLIENT_SECRET`, `OAUTH2_REDIRECT_URI`.
 $ vi .env
 ```
 
-### 2. Enable SSL & and generate a self-signed cert
+### 2. Enable SSL & generate a self-signed cert
 
 ```bash
 $ cd laradoc

@@ -28,6 +28,8 @@ class WelcomeController extends BaseController
             'scope' => ['users.all:read', 'rooms.all:read_write']
         ]);
 
+        $provider->getState();
+
         return view('start', [
             'url' => $url,
         ]);

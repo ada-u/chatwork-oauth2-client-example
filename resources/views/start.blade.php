@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>start - adavalue</title>
+    <title>start - callback - ウェザーキャスター「アダチ」</title>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="css/app.css" rel="stylesheet" type="text/css">
@@ -16,8 +16,8 @@
     <div class="row">
         <div class="col">
             <div class="lead">
-                <h1>adavalue</h1>
-                <a class="btn btn-primary btn-lg" href="{{ $url }}" role="button">make value</a>
+                <h1>ウェザーキャスター「アダチ」</h1>
+                <a class="btn btn-primary btn-lg" href="{{ $url }}" role="button">チャットワークにウェザーをキャスト</a>
             </div>
         </div>
     </div>

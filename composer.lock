@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "604da5152b79c46bb5de7f0eb70cc07d",
+    "content-hash": "e6f2ff47ad16ab0caca0390aeeb833bd",
     "packages": [
         {
             "name": "chatwork/oauth2-chatwork",

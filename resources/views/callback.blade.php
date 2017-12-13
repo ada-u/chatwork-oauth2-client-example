@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>callback - adavalue</title>
+    <title>callback - ウェザーキャスター「アダチ」</title>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="css/app.css" rel="stylesheet" type="text/css">
@@ -18,9 +18,7 @@
 
             <div class="lead">
                 <h1>resource owner</h1>
-                <pre>id: {{ $resource_owner->getId() }}</pre>
-                <pre>name: {{ $resource_owner->getName() }}</pre>
-                <pre>mail: {{ $resource_owner->getMail() }}</pre>
+
             </div>
         </div>
 
