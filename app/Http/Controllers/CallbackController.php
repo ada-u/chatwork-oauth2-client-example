@@ -52,7 +52,7 @@ class CallbackController extends BaseController
             ]
         ));
 
-        $resource_owner = $provider->getResourceOwner($accessToken);
+        $resourceOwner = $provider->getResourceOwner($accessToken);
 
         //if ($accessToken->hasExpired()) {
         $refreshedAccessToken = $provider->getAccessToken((string) new RefreshToken(), [
@@ -62,7 +62,7 @@ class CallbackController extends BaseController
 
         Log::debug(json_encode(
             [
-                'resource_owner' => $resource_owner->toArray()
+                'resource_owner' => $resourceOwner->toArray()
             ]
         ));
 
@@ -74,7 +74,7 @@ class CallbackController extends BaseController
         ]);
 
         return view('callback', [
-            'resource_owner'         => $resource_owner,
+            'resource_owner'         => $resourceOwner,
             'access_token'           => $accessToken->getToken(),
             'refreshed_access_token' => $refreshedAccessToken->getToken(),
             'state'                  => $state,
